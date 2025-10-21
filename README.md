@@ -2,7 +2,7 @@
 **Nama:** Rifqi Ilhami Fauzi  
 **NIM:** 1237050121  
 **Mata Kuliah:** Manajemen Basis Data  
-**Dosen:** [Isi dengan nama dosen pengampu kamu]
+**Dosen:** Wildan budiawan
 
 ---
 
