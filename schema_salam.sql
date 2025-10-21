@@ -1,0 +1,9 @@
+
+CREATE SCHEMA IF NOT EXISTS salam AUTHORIZATION postgres;
+
+CREATE TABLE IF NOT EXISTS salam.mahasiswas (
+    id SERIAL PRIMARY KEY,
+    nim VARCHAR(15) UNIQUE NOT NULL,
+    nama VARCHAR(100) NOT NULL,
+    umur INT CHECK (umur > 16)
+);

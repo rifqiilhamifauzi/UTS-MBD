@@ -1,0 +1,33 @@
+version: '3.8'
+
+services:
+  postgres_rifqi:
+    image: postgres:15
+    container_name: postgres_rifqi
+    env_file:
+      - .env
+    ports:
+      - "22121:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    networks:
+      - rifqi_network
+
+  pgadmin_rifqi:
+    image: dpage/pgadmin4
+    container_name: pgadmin_rifqi
+    env_file:
+      - .env
+    ports:
+      - "44121:80"
+    depends_on:
+      - postgres_rifqi
+    networks:
+      - rifqi_network
+
+volumes:
+  postgres_data:
+
+networks:
+  rifqi_network:
+    driver: bridge
